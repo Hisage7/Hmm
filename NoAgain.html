@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>She Said NOOOOOO</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+
+     .gif-wrapper {
+      width:50%;           /* 20% bigger than 50% */
+      max-width: 200x;     /* optional max width */
+      margin: 0 auto;       /* center */
+    }
+   /* Make the iframe inside scale */
+    .gif-wrapper iframe {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #2d3436 0%, #000000 100%);
+      overflow: hidden;
+ font-family: 'Dancing Script', cursive;
+    }
+
+    .container {
+      text-align: center;
+      color: white;
+      z-index: 2;
+      animation: shake 0.5s;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-20px); }
+      75% { transform: translateX(20px); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #ff0000;
+      text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+    }
+
+    .sad-emoji {
+      font-size: 5rem;
+      margin: 30px 0;
+      animation: cry 2s infinite;
+      display: inline-block;
+    }
+
+    @keyframes cry {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(-10deg);
+      }
+      75% {
+        transform: rotate(10deg);
+      }
+    }
+
+    .message {
+      font-size: 2.5rem;
+      margin-top: 30px;
+      line-height: 1.6;
+      color: #dfe6e9;
+    }
+
+    .try-again-btn {
+      margin-top: 50px;
+      display: inline-block;
+      padding: 15px 40px;
+      background: #223fcd;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    
+   .no-again-btn {
+      margin-top: 50px;
+      display: inline-block;
+      padding: 15px 40px;
+      background: #5c0000;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 20px rgba(255, 107, 107, 0);
+      }
+    }
+
+    .try-again-btn:hover {
+      transform: scale(1.1);
+      animation: none;
+    }
+
+    /* Falling tears */
+    .tears {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .tears span {
+      position: absolute;
+      color: rgba(100, 149, 237, 0.5);
+      font-size: 1.5rem;
+      animation: fall 3s infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="tears" id="tears"></div>
+  
+  <div class="container">
+    <h1>Hahaha You really thought that you could hate me💔</h1>
+    <div class="sad-emoji">😼
+
+    </div>
+    
+<div>
+<img src="https://preview.redd.it/в-сеть-слили-твоё-фото-с-рабочего-места-v0-rgeaeb9jybkf1.jpeg?width=1080&crop=smart&auto=webp&s=ec758a77a44a837301f30eaade5c3735e4e3e26c" 
+     alt="Reddit Image" 
+     width="500">
+</div>
+
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+    <div class="message">
+   i can not let you hate me Sosy 💔
+    </div>
+      <a href="yes.html" class="try-again-btn">I LOVE you Dodi 💕</a>       
+
+  
+  
+  </div>
+
+  <script>
+    // Create falling tears
+    const tearsContainer = document.getElementById('tears');
+    for (let i = 0; i < 20; i++) {
+      const tear = document.createElement('span');
+      tear.textContent = '💧';
+      tear.style.left = Math.random() * 100 + '%';
+      tear.style.animationDelay = Math.random() * 3 + 's';
+      tear.style.animationDuration = (Math.random() * 2 + 2) + 's';
+      tearsContainer.appendChild(tear);
+    }
+  </script>
+</body>
+</html>
