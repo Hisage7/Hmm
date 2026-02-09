@@ -86,10 +86,10 @@ function goGrad() {
 
 function playMusic() {
   const iframe = document.getElementById("bgMusic");
-  iframe.src = "https://www.youtube.com/embed/F_6Emq5dyXQ?autoplay=1&loop=1&playlist=F_6Emq5dyXQ&controls=0";
+  iframe.src = iframe.src.replace("mute=1", "mute=0");
 }
 
-document.body.addEventListener("click", playMusic, { once: true });
+document.addEventListener("click", playMusic, { once: true });
 
 
 
