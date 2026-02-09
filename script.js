@@ -84,5 +84,12 @@ function goGrad() {
   window.location.href = "graduation.html";
 }
 
+function playMusic() {
+  const iframe = document.getElementById("bgMusic");
+  iframe.src = "https://www.youtube.com/embed/F_6Emq5dyXQ?autoplay=1&loop=1&playlist=F_6Emq5dyXQ&controls=0";
+}
+
+document.body.addEventListener("click", playMusic, { once: true });
+
 
 
