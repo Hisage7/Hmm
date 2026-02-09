@@ -91,5 +91,7 @@ function playMusic() {
 
 document.addEventListener("click", playMusic, { once: true });
 
+setTimeout(playMusic, 5000); 
+
 
 
